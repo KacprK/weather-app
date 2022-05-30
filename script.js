@@ -1,4 +1,7 @@
 /* global axios */
+// eslint-disable-next-line import/extensions
+import config from './config.js';
+
 const input = document.querySelector('input');
 const button = document.querySelector('button');
 const cityName = document.querySelector('.city-name');
@@ -9,7 +12,7 @@ const temperature = document.querySelector('.temperature');
 const humidityDisplay = document.querySelector('.humidity');
 
 const API_LINK = 'https://api.openweathermap.org/data/2.5/weather?q=';
-const API_KEY = '&appid=9552152577765620805266f7caca10e6';
+const { API_KEY } = config;
 const API_UNITS = '&units=metric';
 
 const getWeather = () => {
